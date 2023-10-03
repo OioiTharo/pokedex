@@ -17,48 +17,10 @@ width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-
     <button class="btn__search">Search</button>
 </div>
 <main>
-    <form>
-        <select id="tipo" name="tipoPokemon">
-            <option value="agua">Agua</option>
-            <option value="fogo">Fogo</option>
-            <option value="eletrico">Elétrico</option>
-            <option value="grama">Grama</option>
-            <option value="pedra">Pedra</option>
-        </select>
-        <section id="habilidades" name="habilidades">
-            <option value="overgrow">Overgrow</option>
-            <option value="blaze">Blaze</option>
-            <option value="torrent">Torrent</option>
-        </section>
-        <div>
-            <h3>Altura:</h3>
-            <label>
-                <input type="checkbox" name="" id="pequeno" value="pequeno">Pequeno
-            </label>
-            <label>
-                <input type="checkbox" name="" id="medio" value="medio">Médio
-            </label>
-            <label>
-                <input type="checkbox" name="" id="grande" value="grande">Grande
-            </label>
-        </div>
-        <div>
-            <h3>Largura:</h3>
-            <label>
-                <input type="checkbox" name="" id="pequeno" value="pequeno">Pequeno
-            </label>
-            <label>
-                <input type="checkbox" name="" id="medio" value="medio">Médio
-            </label>
-            <label>
-                <input type="checkbox" name="" id="grande" value="grande">Grande
-            </label>
-        </div>
-    </form>
     <section>
         <ul>
             <li class="cardPokemon" *ngFor="let pokemon of filteredPokemons()" (click)="showDetails(pokemon)">
-                <img class="photoPokemin" src={{pokemon.photo}} alt="">
+                <img class="photoPokemon" src={{pokemon.photo}} alt="">
                 <h2>{{ pokemon.name }}</h2>
                 <p class="{{type}}" *ngFor="let type of pokemon.type">{{type}}</p>
             </li>
