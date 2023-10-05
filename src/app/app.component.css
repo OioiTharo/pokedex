@@ -72,7 +72,8 @@ h2{
 }
 .cardPokemon{
     padding: 16px;
-    border: 2px solid #3764d3;
+    border: 1px solid #3764d3;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     margin: 30px;
 }
@@ -150,4 +151,8 @@ h2{
 .fechar{
     border: none;
     margin-left: 85%;
+}
+.cab{
+    background-color: #ccc;
+    padding: 5px;
 }

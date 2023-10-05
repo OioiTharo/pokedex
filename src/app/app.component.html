@@ -33,6 +33,26 @@ width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-
         <img src={{selectedPokemon.photo}}>
         <h2>{{selectedPokemon.name}}</h2>
         <p>{{selectedPokemon.description}}</p>
+        <div clas="caracters">
+            <table>
+                <tr>
+                    <td class="cab">Height</td>
+                    <td class="cab">Weight</td>
+                </tr>
+                <tr>
+                    <td>{{selectedPokemon.height}}</td>
+                    <td>{{selectedPokemon.weight}}</td>
+                </tr>
+                <tr>
+                    <td class="cab">Category</td>
+                    <td class="cab">Abilities</td>
+                </tr>
+                <tr>
+                    <td>{{selectedPokemon.category}}</td>
+                    <td>{{selectedPokemon.abilities}}</td>
+                </tr>
+            </table>
+        </div>
         <p class="{{type}}" *ngFor="let type of selectedPokemon.type">{{selectedPokemon.type}}</p>
     </div>
 </div>
