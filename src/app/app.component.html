@@ -8,11 +8,6 @@
 </nav>
 <h1>{{title}}</h1>
 <div class="search">
-    <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
-width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-
-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-
-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5
-52.5T200-580q0 75 52.5 127.5T380-400Z" fill="#3764d3"/></svg>
     <input [(ngModel)]="filterValue" class="inputPrincipal" type="text" placeholder="Pesquisar por nome...">
     <button class="btn__search">Search</button>
 </div>
@@ -32,6 +27,7 @@ width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-
         <button class="fechar" (click)="closeModal()"><span class="material-symbols-outlined">close</span></button>
         <img src={{selectedPokemon.photo}}>
         <h2>{{selectedPokemon.name}}</h2>
+        <p class="{{type}}" *ngFor="let type of selectedPokemon.type">{{selectedPokemon.type}}</p>
         <p>{{selectedPokemon.description}}</p>
         <div clas="caracters">
             <table>
@@ -53,6 +49,6 @@ width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-
                 </tr>
             </table>
         </div>
-        <p class="{{type}}" *ngFor="let type of selectedPokemon.type">{{selectedPokemon.type}}</p>
+        
     </div>
 </div>
